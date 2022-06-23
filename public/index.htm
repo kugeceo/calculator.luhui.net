@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>在线计算器_计算器在线使用_计算器在线计算 - 计算器</title>
+<meta name="Keywords" content="计算器,计算器在线,科学计算器,在线计算器,计算器在线计算,计算器在线使用">
+<meta name="description" content="计算器是数字运算的计算器，本站为您提供计算器在线计算、科学计算、电子计算、根号方程数函数计算与统计等在线计算功能，并可在普通计算器和科学型计算器之间进行切换。">
+<meta name="author" content="计算器">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="static/css/prism.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.ok.css">
+<link rel="stylesheet" type="text/css" href="static/css/jisuanqi.css">
+<link rel="stylesheet" type="text/css" href="static/css/iconfont.css">
+<script type="text/javascript" src="static/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="static/js/zblogphp.js"></script>
+<script type="text/javascript" src="static/js/prism.js"></script>
+<script type="text/javascript" src="static/js/hnysnet.js"></script>
+<style>.mw1024,#navul{max-width:1024px}.content p,.content div{margin-bottom:15px;font-size:14px;}</style>
+</head>
+<body>
+<header class="">
+<div class="mw1024">
+<div class="logo">
+<a href="index.html" title="计算器"><h2 class="sitename type3">计算器</h2></a>
+<p><a href="index.html" title="计算器在线使用">计算器在线使用</a></p>
+</div>
+<div class="topad"><script type="text/javascript" src="static/js/topad.js"></script></div>
+<div id="m10">&nbsp;</div>
+<div id="mnav"><i class="iconfont"></i></div> </div>
+<div class="clear"></div>
+<div class="navbg">
+<ul id="navul">
+<li class="navbar-item"><a href="index.html" target="_parent" title="计算器">首页</a></li><li class="navbar-item"><a href="kexuejisuanqi.html" target="_parent" title="科学计算器">科学计算器</a></li><li class="navbar-item"><a href="fangdaijisuanqi.html" target="_parent" title="房贷计算器">房贷计算器</a></li><li class="navbar-item"><a href="geshuijisuanqi.html" target="_parent" title="个税计算器">个税计算器</a></li><li class="navbar-item"><a href="fulijisuanqi.html" target="_parent" title="复利计算器">复利计算器</a></li><li class="navbar-item"><a href="yuchanqijisuanqi.html" target="_parent" title="预产期计算器">预产期计算器</a></li><li class="navbar-item"><a href="anquanqijisuanqi.html" target="_parent" title="安全期计算器">安全期计算器</a></li><li class="navbar-item"><a href="bimjisuanqi.html" target="_parent" title="BMI计算器">BMI计算器</a></li><li class="navbar-item"><a href="nianlingjisuanqi.html" target="_parent" title="年龄计算器">年龄计算器</a></li><li class="navbar-end"><span><a href="riqijisuanqi.html" target="_parent" title="日期计算器">日期计算器</a></span></li> </ul>
+</div>
+</header>
+<div class="main">
+<div class="mw1024">
+<div class="js-silder">
+<div class="silder-scroll">
+<div class="silder-main">
+<center><img src="static/picture/jisuanqis.png" alt="计算器"><h2>计算器在线计算</h2>在线计算器为您提供计算器在线计算、科学计算、电子计算、函数计算与统计、语音计算器等在线计算功能。</center>
+<div id="divMain">
+<script type="text/javascript" src="static/js/calc.js"></script>
+<div class="qiehuankuang_1" id="btns">
+<input type="button" value="普通计算器" class="qiehuankuang_1_dq" />
+<input type="button" value="科学计算器" />
+</div>
+<div id="jisuan">
+<div class="calculator_main" id="calculator">
+<div class="calculator_con  current">
+<div id="calculator_base" style="display: block"></div>
+<div class="calculator_hd">
+<input type="text" id="resultIpt" readonly class="resultIpt" value="0" size="17" maxlength="17"></div>
+<div id="baseEprsPanel" valign="middle" width="290" style="display:none"></div>
+<div class="calculator_bd" id="calculator_bd">
+<ul class="calculator_table">
+<li>
+<a class="cal_btn" href="javascript:;" onclick="calculator.memory(this,0);">存储</a>
+<a class="cal_btn" href="javascript:;" onclick="calculator.memory(this,1);">取存</a>
+<a class="cal_btn cla_btn_org" href="javascript:;" id="simpleDel" onclick="calculator.remove();">退格</a>
+<a class="cal_btn cla_btn_org" href="javascript:;" id="simpleClearAllBtn" onclick="calculator.clearAll();">清屏</a></li>
+<li>
+<a class="cal_btn" href="javascript:;" onclick="calculator.memory(this,-1);">累存</a>
+<a class="cal_btn" href="javascript:;" onclick="calculator.memory(this,-2);">积存</a>
+<a class="cal_btn" href="javascript:;" onclick="calculator.memory(this,2);">清存</a>
+<a class="cal_btn cal_btn_gray fontArial" id="simpleDivi" href="javascript:;" onclick="calculator.input(this,3);">÷</a></li>
+<li>
+<a class="cal_btn fontArial" id="simple7" href="javascript:;" onclick="calculator.input(this,-1);">7</a>
+<a class="cal_btn fontArial" id="simple8" href="javascript:;" onclick="calculator.input(this,-1);">8</a>
+<a class="cal_btn fontArial" id="simple9" href="javascript:;" onclick="calculator.input(this,-1);">9</a>
+<a class="cal_btn cal_btn_gray fontArial" id="simpleMulti" href="javascript:;" onclick="calculator.input(this,2);">x</a></li>
+<li>
+<a class="cal_btn fontArial" href="javascript:;" id="simple4" onclick="calculator.input(this,-1);">4</a>
+<a class="cal_btn fontArial" href="javascript:;" id="simple5" onclick="calculator.input(this,-1);">5</a>
+<a class="cal_btn fontArial" href="javascript:;" id="simple6" onclick="calculator.input(this,-1);">6</a>
+<a class="cal_btn cal_btn_gray fontArial" href="javascript:;" id="simpleSubtr" onclick="calculator.input(this,1);">-</a></li>
+<li>
+<a class="cal_btn fontArial" href="javascript:;" id="simple1" onclick="calculator.input(this,-1);">1</a>
+<a class="cal_btn fontArial" href="javascript:;" id="simple2" onclick="calculator.input(this,-1);">2</a>
+<a class="cal_btn fontArial" href="javascript:;" id="simple3" onclick="calculator.input(this,-1);">3</a>
+<a class="cal_btn cal_btn_gray fontArial" href="javascript:;" id="simpleAdd" onclick="calculator.input(this,0);">+</a></li>
+<li>
+<a class="cal_btn fontArial" href="javascript:;" id="simple0" onclick="calculator.input(this,-1);">0</a>
+<a class="cal_btn fontArial" href="javascript:;" id="simpleDot" onclick="calculator.input(this,-1);">.</a>
+<a class="cal_btn fontArial" href="javascript:;" onclick="calculator.input(this,-3);">+/-</a>
+<a class="cal_btn cal_btn_bla fontArial" id="simpleEqual" href="javascript:;" onclick="calculator.input(this,-2);">=</a></li>
+</ul>
+</div>
+</div>
+<div class="calculator_con">
+<div class="calculator_hd">
+<input type="text" class="resultIpt" id="gaoji" name="gaoji" value="0">
+<div id="completeEprsPanel" valign="middle" width="290" style="display:none"></div>
+</div>
+<div class="calculator_bd">
+<ul class="complete_table_rdo">
+<li>
+<div class="labinp">
+<input type="radio" name="carry" onclick="inputChangCarry(16);" id="hex">
+<label for="hex">十六进制</label></div>
+<div class="labinp">
+<input type="radio" name="carry" onclick="inputChangCarry(10);" id="decimal" checked="checked" display="block">
+<label for="decimal">十进制</label></div>
+<div class="labinp">
+<input type="radio" name="carry" onclick="inputChangCarry(8);" id="octal">
+<label for="octal">八进制</label></div>
+<div class="labinp">
+<input type="radio" name="carry" onclick="inputChangCarry(2);" id="binary">
+<label for="binary">二进制</label></div>
+<div class="labinp"></div>
+<div class="labinp">
+<input type="radio" name="angle" onclick="inputChangAngle('d');">
+<label for="angle">角度制</label></div>
+<div class="labinp">
+<input type="radio" name="angle" onclick="inputChangAngle('r');">
+<label for="angle">弧度制</label></div>
+</li>
+<li>
+<div class="labinp">
+<input type="checkbox" id="upperFile" onclick="inputshift();">
+<label for="upperFile">上档功能</label></div>
+<div class="labinp">
+<input type="checkbox" id="hyperbolic" onclick="inputshift();">
+<label for="hyperbolic">双曲函数</label></div>
+<div class="ipts">
+<input type="text" name="bracket" id="bracket" readonly size="3" class="chk_text_inp">
+<input type="text" name="memory" id="memory" readonly size="3" class="chk_text_inp">
+<input type="text" name="operator" id="operator" readonly size="3" class="chk_text_inp"></div>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="completeDel" onclick="backspace();">退格</a>
+<a class="cal_btn cla_btn_org" href="javascript:;" onclick="document.getElementById('gaoji').value=0;document.getElementById('completeEprsPanel').innerHTML = '';this.blur();">清屏</a></li>
+</ul>
+<ul class="complete_table_main">
+<li>
+<a class="cal_btn" href="javascript:;" onclick="putmemory();">存储</a>
+<a class="cal_btn" href="javascript:;" onclick="getmemory();">取存</a>
+<a class="cal_btn" href="javascript:;" onclick="addmemory();">累存</a>
+<a class="cal_btn" href="javascript:;" onclick="multimemory();">积存</a>
+<a class="cal_btn" href="javascript:;" onclick="clearmemory();">清存</a>
+<a class="cal_btn cla_btn_org" href="javascript:;" onclick="clearall();">全清</a></li>
+<li>
+<a class="cal_btn fontArial" id="complete7" href="javascript:;" onclick="inputkey('7');">7</a>
+<a class="cal_btn fontArial" id="complete8" href="javascript:;" onclick="inputkey('8');">8</a>
+<a class="cal_btn fontArial" id="complete9" href="javascript:;" onclick="inputkey('9');">9</a>
+<a class="cal_btn cal_btn_gray fontArial" id="completeDivi" href="javascript:;" onclick="operation('/',6);;">÷</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="operation('%',6);">取余</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="operation('&',3);">与</a></li>
+<li>
+<a class="cal_btn fontArial" id="complete4" href="javascript:;" onclick="inputkey('4');">4</a>
+<a class="cal_btn fontArial" id="complete5" href="javascript:;" onclick="inputkey('5');">5</a>
+<a class="cal_btn fontArial" id="complete6" href="javascript:;" onclick="inputkey('6');">6</a>
+<a class="cal_btn cal_btn_gray fontArial" id="completeMulti" href="javascript:;" onclick="operation('*',6);">x</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="changeDecimal" onclick="inputfunction('floor','deci');">取整</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="operation('|',1);">或</a></li>
+<li>
+<a class="cal_btn fontArial" id="complete1" href="javascript:;" onclick="inputkey('1');">1</a>
+<a class="cal_btn fontArial" id="complete2" href="javascript:;" onclick="inputkey('2');">2</a>
+<a class="cal_btn fontArial" id="complete3" href="javascript:;" onclick="inputkey('3');">3</a>
+<a class="cal_btn cal_btn_gray fontArial" id="completeSubtr" href="javascript:;" onclick="operation('-',5);">-</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="operation('<',4);">左移</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="inputfunction('~','~');">非</a></li>
+<li>
+<a class="cal_btn fontArial" id="complete0" href="javascript:;" onclick="inputkey('0');">0</a>
+<a class="cal_btn fontArial" href="javascript:;" onclick="changeSign();">+/-</a>
+<a class="cal_btn fontArial" id="completeDot" href="javascript:;" id="dian" onclick="inputkey('.');">.</a>
+<a class="cal_btn cal_btn_gray fontArial" id="completeAdd" href="javascript:;" onclick="operation('+',5);">+</a>
+<a class="cal_btn cal_btn_bla fontArial" id="completeEqual" href="javascript:;" onclick="result();">=</a>
+<a class="cal_btn cal_btn_gre " href="javascript:;" onclick="operation('x',2);">异或</a></li>
+<li>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="ka" onclick="inputkey('a');">A</a>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="kb" onclick="inputkey('b');">B</a>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="kc" onclick="inputkey('c');">C</a>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="kd" onclick="inputkey('d');">D</a>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="ke" onclick="inputkey('e');">E</a>
+<a class="cal_btn cal_btn_gre fontArial" href="javascript:;" id="kf" onclick="inputkey('f');">F</a></li>
+</ul>
+<ul class="complete_more">
+<li>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="pi" onclick="inputfunction('pi','pi');">PI</a>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="e" onclick="inputfunction('e','e');">E</a>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="bt" onclick="inputfunction('dms','deg');">d.ms</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="addbracket(this);">(</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="disbracket(this);">)</a></li>
+<li>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="ln" onclick="inputfunction('ln','exp');">In</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="log" onclick="inputfunction('log','expdec');">log</a>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="sin" onclick="inputtrig('sin','arcsin','hypsin','ahypsin');">sin</a>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="cos" onclick="inputtrig('cos','arccos','hypcos','ahypcos');">cos</a>
+<a class="cal_btn cal_btn_dis" href="javascript:;" id="tan" onclick="inputtrig('tan','arctan','hyptan','ahyptan');">tan</a></li>
+<li>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="inputfunction('!','!');">n!</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="inputfunction('recip','recip');">1/x</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="sqr" onclick="inputfunction('sqr','sqrt');">x^2</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" id="cube" onclick="inputfunction('cube','cubt');">x^3</a>
+<a class="cal_btn cal_btn_gre" href="javascript:;" onclick="operation('^',7);">x^y</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>jisuanqi_run();var oBtns=document.getElementById('btns');var aLi=oBtns.getElementsByTagName('input');var aLiLength=aLi.length;var oCal=document.getElementById('calculator');var aDiv=oCal.getElementsByClassName('calculator_con');for (var i=0;i<aLiLength;i++){(function(idx){aLi[idx].onclick =function(){document.getElementById('resultIpt').value=0;document.getElementById('gaoji').value =0;for(var j =0;j<aLiLength;j++){aLi[j].className='btnss';aDiv[j].className='calculator_con';}
+ this.className='qiehuankuang_1_dq';aDiv[idx].className='calculator_con current';}
+})(i);}
+</script> </div>
+</div>
+</div>
+<div class="spm" id=""><h3>在线科学计算器使用说明</h3>
+<div class="content">
+<div class="content3">
+<p><span style="color: blue; font-size: 15px; line-height: 1.5;"></span><span style="color: #FF0000;">根号：先按数字，然后点击“x^y”键，再输入0.5，最后按“=”键</span></p>
+<p><span style="color: #FF0000;">³√￣：按数字，然后按"x＾y"，接着按"3"，再按"1/x"，最后按“=”键</span><br><span style="color: blue; font-size: 15px; line-height: 1.5;"></span></p>
+<p>储存：将当前值存到暂存器</p>
+<p>取存：将暂存器的值取出</p>
+<p>累存：将当前值与存储器的暂存值相加，再存入暂存器</p>
+<p>积存：将当前值与存储器的暂存值相乘，再存入暂存器</p>
+<p>清存：将存储器暂存值清零</p>
+<p>
+	统计计算：可计算一系列数据的和，平均值等。</p>
+<p>
+	科学计算：可进行函数、对数运算，以及阶乘、幂运算等。</p>
+<p>
+	数制的转换：可进行十进制、二进制、八进制、十六进制整数的相互转换。</p>
+<p>
+	其中有很多的特殊符号，例如：PI等于&pi; 的意思，就是&pi;=3.1415926```或6.283185```或9.424777```</p>
+<p>
+	ln 就是自然对数，在数学中 ln(x)是以e为底的x的对数，f(x)=ln|x|的导函数为f&#39;(x)=1/x。</p>
+<p>
+	log 举个例子就是：lg5,是以10为底的对数，10是可以省略的，等于0.698970。</p>
+<p>
+	sin &mdash;&mdash;角A的对边与斜边的比叫做角A的正弦，记作sinA，即sinA=角A的对边/斜边</p>
+<p>
+	cos&mdash;&mdash;余弦定理是揭示三角形边角关系的重要定理，直接运用它可解决一类已知三角形两边及夹角求第三边或者是已知三个边求角的问题，若对余弦定理加以变形并适当移于其它知识，则使用起来更为方便、灵活。</p>
+<p>
+	tan&mdash;&mdash;正切函数是直角三角形中,对边与邻边的比值。</p>
+<p>
+	n!&mdash;&mdash;这个是数学中的阶乘。</p>
+<p>
+	等等这些符号有利于我们在线计算，方便快捷的得出结果。</p>
+</div>
+</div>
+</div>
+<div class="spm" id=""><h3>计算器介绍</h3>
+<div class="content">
+<div class="content4">
+<p>计算器（calculator ；counter）一般是指“电子计算器”，计算器是现代人发明的可以进行数字运算的电子机器。</p>
+<p>它能进行数学运算的手持电子机器，拥有集成电路芯片，但结构比电脑简单得多，可以说是第一代的电子计算机（电脑），且功能也较弱，但较为方便与廉价，可广泛运用于商业交易中，是必备的办公用品之一。除显示计算结果外，还常有溢出指示、错误指示等。电源采用交流转换器或电池，电池可用交流转换器或太阳能转换器再充电。为节省电能，都采用CMOS工艺制作的大规模集成电路。</p>
+<p>一般由运算器、控制器、存储器、键盘、显示器、电源和一些可选外围设备及电子配件，通过人工或机器设备组成。低档的运算器、控制器由数字逻辑电路实现简单的串行运算，其随机存储器只有一、二个单元，供累加存储用。高档的由微处理器和只读存储器实现各种复杂的运算程序，有较多的随机存储单元以存放输入程序和数据。键盘是输入部件，一般采用接触式或传感式。为减小计算器的尺寸，一键常常有多种功能。显示器是输出部件，有发光二极管显示器或液晶显示器等。除显示计算结果外，还常有溢出指示、错误指示等。电源采用交流转换器或电池，电池可用交流转换器或太阳能转换器再充电。为节省电能，都采用CMOS工艺制作的大规模集成电路（见互补金属-氧化物-半导体集成电路），并在内部装有定时不操作自动断电电路。可选用的外围设备有微型打印机、盒式磁带机和磁卡机等。</p>
+<p>从某种角度而言，广义的“计算机”是包括“电子计算器”的。也有集成电路，但功能简便，价格更加便宜，利于携带与稳定性好。 </p>
+</div>
+</div>
+</div>
+<div class="spm" id=""><h3>在线计算器介绍</h3>
+<div class="content">
+<div class="content1">
+<p style="text-align: center;"><img class="ue-image" src="static/picture/jisuanqi.png" alt="计算器"></p>
+<p>计算器（calculator
+；counter）一般是指“电子计算器”，该名词由日文传入中国。计算器能进行数学运算的手持机器，拥有集成电路芯片，但结构简单，比现代电脑结构简单得多，可以说是第一代的电子计算机（电脑），且功能也较弱，但较为方便与廉价，可广泛运用于商业交易中，是必备的办公用品之一。</p>
+<p>在线计算器是一个虚拟的网页计算器，基础版的网页计算器，为用户提供加、减、乘、除等基本的数学计算，还可以暂存计算结果，在需在线计算器要时通过“取存”键调出来再与其他计算结果进行运算。除了基础版外，还提供高级版的计算器，加入了圆周率、正弦、余弦、正切、对数等计算功能，力求满足广大网友的需要。</p>
+<h3>
+	计算器与电子计算机的区别</h3>
+<p>
+	计算器与电子计算机的最大区别在于：</p>
+<p>
+	只是简单的计算工具，有些机型具备函数计算功能，有些机型具备一定的贮存功能，但一般只能存储几组数据。</p>
+<p>
+	计算机则具备复杂存贮功能、控制功能，更加强大，在中国俗称&ldquo;电脑&rdquo;</p>
+<p>
+	和计算机一样都能够实现数据的录入、处理、存储和输出。</p><p>
+	区别于计算机的就是，它不能自动地实现这些操作过程，必须由人来操作完成。而计算机通过编制程序能够自动进行处理。所以以自动化程度来区别二者，就在于是否需要人工干预其运行。</p>
+<p>
+	实际上，二者还有另一个本质性的区别。它使用的是固化的处理程序，只能完成特定的计算任务；而计算机借助操作系统平台和各类应用软硬件，可以无限扩展其应用领域。也就是说，是否具有扩展性是二者的本质区别。</p>
+<p>
+	单片机又称单片微控制器。它不是完成某一个逻辑功能的芯片,而是把一个计算机系统集成到一个芯片上。概括的讲：一块芯片就成了一台计算机。在计算机应用与智能化控制的科学家、工程师手中，它和计算机的本质相同，可以开发出针对各类电子电气产品的应用，例如洗衣机。但对于用户来说，他们并不需要知道洗衣机里的单片机的接口和编程语言，只要能操作洗衣服就行，因此单片机用于某个具体的电子产品上就需要配合简洁方便的人机界面，用户只使用它的特定功能。</p>
+</div>
+</div>
+</div>
+<div class="spm">
+<h3>友情链接</h3>
+<ul class="flink">
+<li class="link-item"><a href="http://jisuanqi.luhui.net/" title="计算器在线">计算器在线</a></li>
+</ul>
+</div>
+</div></div>
+<footer>
+<div class="mw1024">
+<p>Copyright © 2004-01-11 <a href="http://jisuanqi.luhui.net/" title="计算器" target="_blank">鲁虺文化网</a> 版权所有<br /></p>
+<p>本站网页完美兼容PC、手机、平板等无障碍访问，网址均为：<a href="http://jisuanqi.luhui.net/" title="计算器"><font color="blue"><u>luhui.net</u></font></a></p>
+<p><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)" rel="sidebar" style="color:#FF9900;font-size: 20px;" title="请使用Ctrl+D进行添加,或手动在浏览器里进行设置.">收藏本站</a></p>
+<script type="text/javascript" language="javascript">
+     //加入收藏
+         function AddFavorite(sURL, sTitle) {
+             sURL = encodeURI(sURL); 
+        try{   
+             window.external.addFavorite(sURL, sTitle);   
+         }catch(e) {   
+             try{   
+                 window.sidebar.addPanel(sTitle, sURL, "");   
+             }catch (e) {   
+                 alert("请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+             }   
+         }
+     }
+</script>
+</div>
+<div style="display:none;"><script language="javascript" type="text/javascript" src="static/js/tj.js"></script></div>
+</footer>
+</body>
+</html>
