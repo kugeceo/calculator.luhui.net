@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>年龄计算器_年龄计算器在线计算_在线计算周岁虚岁 - 计算器</title>
+<meta name="Keywords" content="计算器,计算器在线,年龄计算器,年龄计算器在线计算,年龄计算,年龄查询,计算年龄">
+<meta name="description" content="年龄计算器（周岁计算器,虚岁计算器,实际岁数计算器），输入出生日期即可快速计算出来周岁年龄、虚岁年龄、实际年龄、生肖、星座及距今生活天数。">
+<meta name="author" content="计算器">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="static/css/prism.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.ok.css">
+<link rel="stylesheet" type="text/css" href="static/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="static/css/yuchanqi.css">
+<script type="text/javascript" src="static/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="static/js/hnysnet.js"></script>
+<style>.mw1024,#navul{max-width:1024px}.content p,.content div{margin-bottom:15px;font-size:14px;}</style>
+<style>
+.all_an_1 {
+    border: 1px solid #12afff;
+    background-image: url(static/images/all.png);
+    background-repeat: no-repeat;
+    color: #FFF;
+    cursor: pointer;
+    height: 23px;
+    padding-top: 0;
+    padding-right: 5px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    margin: 0;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.huisefengexian {
+    height: 23px;
+    text-align:right;
+    font-size: 16px;
+}
+</style>
+
+<script type="text/javascript" src="static/js/xz.js"></script>
+<script type="text/javascript" src="static/js/nl.js"></script>
+<script type="text/javascript">
+function tyy(y1, y2, select_id)
+{
+ys = "<select name='"+select_id+"' id='"+select_id+"'>";
+for (i=y1;i<=y2;i++)
+{
+	ys=ys+"<option value='"+i+"'>"+i+"</option>";
+}
+ys = ys+"</select>";
+document.write(ys);
+}
+//公历提交
+function gongli_tijiao(){
+document.getElementById("share_layer").style.display='block';
+var nongli=CalConv(0,document.getElementById("gongli_nian").value,document.getElementById("gongli_yue").value,document.getElementById("gongli_ri").value);
+if (nongli==3 )
+alert("请输入正确的日期!");
+else 
+	{
+	
+nonglisr.innerHTML=	nongli
+document.getElementById("nongli_nian").value=nongli.substring(0,4);
+document.getElementById("nongli_yue").value=nongli.substring(5,nongli.indexOf('月'));
+document.getElementById("nongli_ri").value=nongli.substring(nongli.indexOf('月')+1,nongli.indexOf('日'));
+nongli_yue=nongli.substring(5,nongli.indexOf('月'));
+if (nongli_yue<0){
+var nongli_yue="闰"+nongli.substring(6,nongli.indexOf('月'));
+}
+nonglisr.innerHTML=	nongli.substring(0,4)+"年"+nongli_yue+"月"+nongli.substring(nongli.indexOf('月')+1,nongli.indexOf('日'))+"日";
+	var year1=document.getElementById("gongli_nian").value;
+	var month1=document.getElementById("gongli_yue").value;
+	var day1=document.getElementById("gongli_ri").value;
+	var riqi=year1+"/"+month1+"/"+day1;
+	var shisui = document.getElementById("shisui");
+	shisui.innerHTML=GetAgeByBrithday(riqi)+"岁";
+	xingzuo.innerHTML=signs(month1,day1);
+	gonglisr.innerHTML=year1+"年"+month1+"月"+day1+"日";
+	var nonglinian=nongli.substring(0,4)
+	shengxiao.innerHTML=get_sx(nonglinian)
+	xusui.innerHTML=get_xusui(nonglinian)+"岁"	
+	shenghuots.innerHTML=get_tianshu(riqi)+"天"
+	xiacishengri.innerHTML=get_xcshengri(riqi)	
+	}
+}
+//农历提交
+function nongli_tijiao(){
+document.getElementById("share_layer").style.display='block';
+var nongli1=CalConv(1,document.getElementById("nongli_nian").value,document.getElementById("nongli_yue").value,document.getElementById("nongli_ri").value);
+
+if (nongli1==3) {
+alert("请输入正确的日期!");
+}
+else{
+document.getElementById("gongli_nian").value=nongli1.substring(0,4);
+document.getElementById("gongli_yue").value=nongli1.substring(4,6);
+document.getElementById("gongli_ri").value=nongli1.substring(6);
+gongli_tijiao(0,document.getElementById("gongli_nian").value,document.getElementById("gongli_yue").value,document.getElementById("gongli_ri").value);
+}
+}
+</script>
+
+</head>
+<body>
+<header class="">
+<div class="mw1024">
+<div class="logo">
+<a href="index.html" title="计算器"><h2 class="sitename type3">计算器</h2></a>
+<p><a href="nianlingjisuanqi.html" title="年龄计算器在线计算">年龄计算器在线计算</a></p>
+</div>
+<div class="topad"><script type="text/javascript" src="static/js/topad.js"></script></div>
+<div id="m10">&nbsp;</div>
+<div id="mnav"><i class="iconfont"></i></div> </div>
+<div class="clear"></div>
+<div class="navbg">
+<ul id="navul">
+<li class="navbar-item"><a href="index.html" target="_parent" title="计算器">首页</a></li><li class="navbar-item"><a href="kexuejisuanqi.html" target="_parent" title="科学计算器">科学计算器</a></li><li class="navbar-item"><a href="fangdaijisuanqi.html" target="_parent" title="房贷计算器">房贷计算器</a></li><li class="navbar-item"><a href="geshuijisuanqi.html" target="_parent" title="个税计算器">个税计算器</a></li><li class="navbar-item"><a href="fulijisuanqi.html" target="_parent" title="复利计算器">复利计算器</a></li><li class="navbar-item"><a href="yuchanqijisuanqi.html" target="_parent" title="预产期计算器">预产期计算器</a></li><li class="navbar-item"><a href="anquanqijisuanqi.html" target="_parent" title="安全期计算器">安全期计算器</a></li><li class="navbar-item"><a href="bimjisuanqi.html" target="_parent" title="BMI计算器">BMI计算器</a></li><li class="navbar-item"><a href="nianlingjisuanqi.html" target="_parent" title="年龄计算器">年龄计算器</a></li><li class="navbar-end"><span><a href="riqijisuanqi.html" target="_parent" title="日期计算器">日期计算器</a></span></li> </ul>
+</div>
+</header>
+<div class="main">
+<div class="mw1024">
+<div class="js-silder">
+<div class="silder-scroll">
+<div class="silder-main">
+<div class="mod-panel">
+<div class="hd">
+<img src="static/picture/nianlingjisuanqi.png" alt="年龄计算器"><h1>年龄计算器在线计算</h1>在线年龄计算器通过公历或农历出生日期计算年龄，计算周岁年龄、虚岁年龄、生肖、星座，公历生日，农历生日。</div>
+<div class="bd">
+<table width="99%" style="max-width: 380px;padding: 15px 15px;margin: 15px auto;border: solid 1px #b8dcf5;background-color: #ededed;" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="45">
+<span id="gongli_xz">公历生日：</span>
+<script type="text/javascript">tyy(1936, 2031, "gongli_nian");</script>
+年
+<select id="gongli_yue" name="gongli_yue">
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+月
+<select id="gongli_ri" name="gongli_ri">
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+日
+</td>
+<td><input type="submit" onclick="gongli_tijiao();" value="查询" class="all_an_1" /></td>
+</tr>
+<tr>
+<td>
+<span id="nongli_xz">农历生日：</span>
+<script type="text/javascript">tyy(1937, 2031, "nongli_nian");</script>
+年
+<select id="nongli_yue" name="nongli_yue">
+<option value="01">正</option>
+<option value="02">二</option>
+<option value="03">三</option>
+<option value="04">四</option>
+<option value="05">五</option>
+<option value="06">六</option>
+<option value="07">七</option>
+<option value="08">八</option>
+<option value="09">九</option>
+<option value="10">十</option>
+<option value="11">冬</option>
+<option value="12">腊</option>
+<option value="-01">闰正</option>
+<option value="-02">闰二</option>
+<option value="-03">闰三</option>
+<option value="-04">闰四</option>
+<option value="-05">闰五</option>
+<option value="-06">闰六</option>
+<option value="-07">闰七</option>
+<option value="-08">闰八</option>
+<option value="-09">闰九</option>
+<option value="-10">闰十</option>
+<option value="-11">闰冬</option>
+<option value="-12">闰腊</option>
+</select>
+月
+<select id="nongli_ri" name="nongli_ri">
+<option value="01">初一</option>
+<option value="02">初二</option>
+<option value="03">初三</option>
+<option value="04">初四</option>
+<option value="05">初五</option>
+<option value="06">初六</option>
+<option value="07">初七</option>
+<option value="08">初八</option>
+<option value="09">初九</option>
+<option value="10">初十</option>
+<option value="11">十一</option>
+<option value="12">十二</option>
+<option value="13">十三</option>
+<option value="14">十四</option>
+<option value="15">十五</option>
+<option value="16">十六</option>
+<option value="17">十七</option>
+<option value="18">十八</option>
+<option value="19">十九</option>
+<option value="20">二十</option>
+<option value="21">廿一</option>
+<option value="22">廿二</option>
+<option value="23">廿三</option>
+<option value="24">廿四</option>
+<option value="25">廿五</option>
+<option value="26">廿六</option>
+<option value="27">廿七</option>
+<option value="28">廿八</option>
+<option value="29">廿九</option>
+<option value="30">三十</option>
+</select>
+</td>
+<td><input type="submit" onclick="nongli_tijiao();" value="查询" class="all_an_1" /></td>
+</tr>
+</table>
+<div class="huisefengexian">您可以选择按“公历”或按“农历”任意一种方式查询。</div>
+		<div style="display: none; margin-top: 15px; margin-bottom: -20px;" id="share_layer">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#C5D5C5" align="center"><tr><td><table width="100%" border="0" cellpadding="8" cellspacing="1">
+			<tr><td bgcolor="#F5F5F5" align="center" width="100">周岁</td><td bgcolor="#FFFFFF" align="center" width="50" ><font color="#ff0000"><strong><div name="shisui" id="shisui"></div></strong></font></td><td bgcolor="#FFFFFF"><font color="#999999">周岁算法：每过一个生日就长一岁。</font></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">虚岁</td><td bgcolor="#FFFFFF" align="center"><font color="#ff0000"><strong><div name="xusui" id="xusui"></div></strong></font></td><td bgcolor="#FFFFFF"><font color="#999999">虚岁算法：一出生就是一岁，然后，每过一个春节就长一岁。</font></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">生肖</td><td colspan="2"  bgcolor="#FFFFFF"><div name="shengxiao" id="shengxiao"></div></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">星座</td><td colspan="2" bgcolor="#FFFFFF"><div name="xingzuo" id="xingzuo"></div></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">公历出生日期</td><td colspan="2" bgcolor="#FFFFFF"><div name="gonglisr" id="gonglisr"></div></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">农历出生日期</td><td colspan="2" bgcolor="#FFFFFF"><div name="nonglisr" id="nonglisr"></div></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">生活天数</td><td colspan="2" bgcolor="#FFFFFF">您在这个世界上生活了：<span name="shenghuots" id="shenghuots"></span></td></tr>
+			<tr><td bgcolor="#F5F5F5" align="center">下次公历生日</td><td colspan="2" bgcolor="#FFFFFF"><div name="xiacishengri" id="xiacishengri"></div></td></tr>
+			</table></td></tr></table>
+			</div>	
+
+<script type="text/javascript">
+document.getElementById("gongli_nian").value="1990";
+document.getElementById("nongli_nian").value="1990";
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spm" id=""><h3>关于年龄计算器</h3>
+<div class="content">
+<div class="content1">
+<strong>①虚岁年龄</strong>
+<p>中国在习惯上常用的年龄计算方法，按出生后所经历的日历年头计算，即生下来就算1岁，以后每过一次新年便增加1岁。一般按农历新年算，也有按公历算的。例如，12月末出生的婴儿，出生后就算1岁，过了公历1月1日或当地农历新年又算1岁。这样，婴儿出生才几天，已算虚岁2岁了。这种计算方法较为实用。</p>
+<strong>②周岁年龄</strong>
+<p>又称实足年龄，指从出生到计算时为止，共经历的周年数或生日数。例如，1990年7月1日零时进行人口普查登记，一个1989年12月15日出生的婴儿，按虚岁计算是2岁，实际刚刚6个多月，还未过一次生日，按周岁计算应为不满1周岁，即0岁。周岁年龄比虚岁年龄常常小1～2岁，它是人口统计中常用的年龄计算方法。周岁—出生时为0岁，每过一个公历生日长1岁。</p>
+<strong>③确切年龄</strong>
+<p>指从出生之日起到计算之日止所经历的天数。它比周岁年龄更为精确地反映人们实际生存的时间，但由于其统计汇总时较为繁琐，故人口统计中使用甚少。在实际生活中，人们除对不满1周岁的婴儿，特别是不满1个月的新生儿常常按月日计算外，一般不按日计算确切年龄。算得上是非常安全的了。</p>
+<strong>④周岁和虚岁的关系</strong>
+<p>
+	虚岁只和过年有关，周岁只和生日有关<br />
+	出生时1虚岁，0周岁<br />
+	过完春节长一虚岁，过完生日长一周岁<br />
+	虚岁＝今年-出生年+1<br />
+	周岁＝今年-出生年（已过生日）（未过生日还要-1）<br />
+	虚岁，周岁传统都用农历计算<br />
+	在过年到生日期间 虚岁-周岁＝2（即虚两岁）<br />
+	在生日到过年期间 虚岁-周岁＝1（即虚一岁）</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="mw1024">
+<p>Copyright © 2004-01-11 <a href="http://jisuanqi.luhui.net/" title="计算器" target="_blank">鲁虺文化网</a> 版权所有<br /></p>
+<p>本站网页完美兼容PC、手机、平板等无障碍访问，网址均为：<a href="http://jisuanqi.luhui.net/" title="计算器"><font color="blue"><u>luhui.net</u></font></a></p>
+</div>
+<div style="display:none;"><script language="javascript" type="text/javascript" src="static/js/tj.js"></script></div>
+</footer>
+</body>
+</html>

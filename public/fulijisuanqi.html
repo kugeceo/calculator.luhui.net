@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复利计算器_在线复利计算器 - 计算器</title>
+<meta name="Keywords" content="计算器,计算器在线,复利计算器,复利计算公式,在线复利计算器,复利计算,复利">
+<meta name="description" content="复利计算公式是计算前一期利息再生利息的问题,计入本金重复计息,即“利生利”“利滚利”。复利计算器是一款在线复利计算工具,可以计算复利终值和复利现值，使用我们的计算器,看看复利是如何让您的投资或存款随时间增长的。">
+<meta name="author" content="计算器">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="static/css/prism.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.ok.css">
+<link rel="stylesheet" type="text/css" href="static/css/iconfont.css">
+<link rel="stylesheet" type="text/css" href="static/css/yuchanqi.css">
+<script type="text/javascript" src="static/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="static/js/hnysnet.js"></script>
+<style>.mw1024,#navul{max-width:1024px}</style>
+</head>
+<body>
+<header class="">
+<div class="mw1024">
+<div class="logo">
+<a href="index.html" title="计算器"><h2 class="sitename type3">计算器</h2></a>
+<p><a href="fulijisuanqi.html" title="在线复利计算器">在线复利计算器</a></p>
+</div>
+<div class="topad"><script type="text/javascript" src="static/js/topad.js"></script></div>
+<div id="m10">&nbsp;</div>
+<div id="mnav"><i class="iconfont"></i></div> </div>
+<div class="clear"></div>
+<div class="navbg">
+<ul id="navul">
+<li class="navbar-item"><a href="index.html" target="_parent" title="计算器">首页</a></li><li class="navbar-item"><a href="kexuejisuanqi.html" target="_parent" title="科学计算器">科学计算器</a></li><li class="navbar-item"><a href="fangdaijisuanqi.html" target="_parent" title="房贷计算器">房贷计算器</a></li><li class="navbar-item"><a href="geshuijisuanqi.html" target="_parent" title="个税计算器">个税计算器</a></li><li class="navbar-item"><a href="fulijisuanqi.html" target="_parent" title="复利计算器">复利计算器</a></li><li class="navbar-item"><a href="yuchanqijisuanqi.html" target="_parent" title="预产期计算器">预产期计算器</a></li><li class="navbar-item"><a href="anquanqijisuanqi.html" target="_parent" title="安全期计算器">安全期计算器</a></li><li class="navbar-item"><a href="bimjisuanqi.html" target="_parent" title="BMI计算器">BMI计算器</a></li><li class="navbar-item"><a href="nianlingjisuanqi.html" target="_parent" title="年龄计算器">年龄计算器</a></li><li class="navbar-end"><span><a href="riqijisuanqi.html" target="_parent" title="日期计算器">日期计算器</a></span></li> </ul>
+</div>
+</header>
+<div class="main">
+<div class="mw1024">
+<div class="js-silder">
+<div class="silder-scroll">
+<div class="silder-main">
+<div class="mod-panel">
+<div class="hd">
+<img src="static/picture/fuli.png" alt="复利计算器"><h1>复利计算器</h1>复利计算公式是计算前一期利息再生利息的问题,计入本金重复计息,即“利生利”“利滚利”。复利计算器是一款在线复利计算工具,可以计算复利终值和复利现值。</div>
+
+
+<script type="text/javascript">
+function calc_t(e){if($(e).val()=="CalcPrinc")var t="#compinterest",n="#principal";else var n="#compinterest",t="#principal";$(t).attr("readonly",!0).val("计算得出"),$(n).removeAttr("readonly").val("")}function calc(){var e=$("#yearrate").val(),t=$("#years").val(),n=$("#bonustime").val();if($('input[name="Calculate"]:checked').val()=="CalcPrinc"){var r=$("#principal").val();if(!r.match(/\d{1,10}(\.\d{1,2})?/)){alert("存入本金请输入正数（整数最多10位,小数点后最多2位)");return}}else{var i=$("#compinterest").val();if(!i.match(/\d{1,12}(\.\d{1,2})?/)){alert("复利终值请输入正数（整数最多12位,小数点后最多2位)");return}}if(!e.match(/\d{1,10}(\.\d{1,2})?/)){alert("年利率请输入正数");return}if(!t.match(/\d{1,4}(\.\d{1,2})?/)){alert("存入年限请输入正数");return}if(!n.match(/\d{1,4}/)){alert("年复利次数请输入正整数");return}$('input[name="Calculate"]:checked').val()=="CalcPrinc"?$("#compinterest").val(calc_c(e,n,t,r)):$("#principal").val(calc_p(e,n,t,i))}function calc_c(e,t,n,r){var i=parseFloat(e)/100,s=parseInt(t),o=parseFloat(n),u=Math.pow(1+i/s,s)-1,a=parseFloat(r),f=a*Math.pow(1+u,o);return Round(f,2)}function calc_p(e,t,n,r){var i=parseFloat(e)/100,s=parseInt(t),o=parseFloat(n),u=Math.pow(1+i/s,s)-1,a=parseFloat(r),f=a*Math.pow(1+u,-o);return Round(f,2)}function Round(e,t){return t==0?p=1:t?p=Math.pow(10,t):p=100,Math.round(e*p)/p}
+</script>
+<style type="text/css">
+#cal_tool h3{margin:1em 0;padding:0;}
+#cal_tool input[type="text"]{
+border: 1px solid #aaa;
+text-shadow: none;
+border-radius: 4px;
+height:32px;
+margin:0 0.2em 0 0;
+padding:0.2em 0.5em;
+box-sizing:border-box;
+background:#FFF;
+display:inline-block;	
+}
+#cal_tool td{padding:0.4em 0;font-size:14px;}
+#cal_tool .btn{
+	background-color: #3bb3e0;
+	padding: 0.4em;
+min-height:34px;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	border: solid 1px #186f8f;
+	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(62,184,229)) );
+	-webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;	
+}
+#cal_tool p{text-align:center;}
+#cal_tool #money,#cal_tool #money1{box-sizing:border-box;width:70%;}
+#cal_tool .coral{color:coral;font-weight:bold;}
+#cal_tool .btn{box-sizing:border-box;width:66px;margin-top:4px}
+#shuomin_box{margin-top:1em;}</style>
+<div id="cal_tool">
+	<table border="0" cellpadding="4" cellspacing="0" style="border:solid 1px #b8dcf5;background:#FFF" width="100%">
+		<tbody>
+			<tr>
+				<td style="text-align: right; width: 85px;">
+					计算项目&nbsp;</td>
+				<td>
+					<input checked="checked" id="radio" name="Calculate" onclick="calc_t(this)" type="radio" value="CalcPrinc" /><label for="radio">本金</label> <input id="radio2" name="Calculate" onclick="calc_t(this)" type="radio" value="CalcComp" /><label for="radio2">终值</label></td>
+				<td rowspan="6" style="min-width: 100px;">
+					<div style="line-height: 180%;font-size:14px;background:#fbfbfb;">
+						<div>
+							<strong>数月转换为年:</strong></div>
+						<div>
+							1个月 = 0.08年</div>
+						<div>
+							2个月 = 0.17年</div>
+						<div>
+							3个月 = 0.25年</div>
+						<div>
+							4个月 = 0.33年</div>
+						<div>
+							5个月 = 0.42年</div>
+						<div>
+							6个月 = 0.50年</div>
+						<div>
+							7个月 = 0.58年</div>
+						<div>
+							8个月 = 0.67年</div>
+						<div>
+							9个月 = 0.75年</div>
+						<div>
+							10个月 = 0.83年</div>
+						<div>
+							11个月 = 0.92年</div>
+						<div>例：存入年限一年零3个月，存入年限项填写：1.25</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					存入本金&nbsp;</td>
+				<td>
+					<input class="txt" id="principal" name="principal" style="width:110px;" type="text" value="10000" /></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					年利率&nbsp;</td>
+				<td>
+					<input class="txt" id="yearrate" name="yearrate" style="width:60px;" type="text" value="2" />%</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					存入年限&nbsp;</td>
+				<td>
+					<input class="txt" id="years" name="years" style="width:60px;" type="text" value="10" /></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					年复利次数&nbsp;</td>
+				<td>
+					<input class="txt" id="bonustime" name="bonustime" style="width:60px;" type="text" value="1" /><br /><br />
+					<input class="btn" id="c_btn" name="c_btn" onclick="calc()" type="submit" value="计算" /></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					复利终值&nbsp;</td>
+				<td>
+					<input class="txt" id="compinterest" name="compinterest" readonly="readonly" style="width:110px;" type="text" value="计算得出" /></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	
+
+</div>
+</div>
+</div>
+</div>
+<div class="spm" id=""><h3>复利计算器使用说明</h3>
+<div class="content">
+<div class="content1">
+<p>（1）复利终值计算器是计算以复利方式记息的终值或现值。 复利的计算是考虑前一期利息再生利息的问题，要计入本金重复计息，即“利生利”“利滚利”。</p>
+<p>（2）通常情况银行存款、理财、股票基金等都是以年利率计算，即年复利次数为1。如果计算包括月份，如存了2年3个月，请在存入年限处输入2.25，请根据一个月等于多少年填写小数部分。</p>
+<p>（3）如果是以其它利率方式计算，请在年利率文本框中输入对应利率，在存入年限文本框中输入对应的期数，在年复利次数中输入1，即可计算出对应的复利终值。</p>
+<p>例如以月利率0.25%的方式存入1000金额，存入20个月计算复利终值。可以在年利率文本框中输入0.25,存入年限本文框中输入20，年复利次数输入1。点击计算即可得出最终本金和利息总数。</p>
+<h3>复利计算公式</h3>
+<p>
+	F=P*(1+i)^n<br />
+	F=A((1+i)^n-1)/i<br />
+	P=F/(1+i)^n<br />
+	P=A((1+i)^n-1)/(i(1+i)^n)<br />
+	A=Fi/((1+i)^n-1)<br />
+	A=P(i(1+i)^n)/((1+i)^n-1)</p>
+<p>
+	F：终值（Future Value），或叫未来值，即期末本利和的价值。<br />
+	P：现值（Present Value），或叫期初金额。<br />
+	A ：年金（Annuity），或叫等额值。<br />
+	i：利率或折现率<br />
+	N：计息期数</p>
+<p>
+	复利的计算是考虑前一期利息再生利息的问题，要计入本金重复计息，即&ldquo;利生利&rdquo;&ldquo;利滚利&rdquo;。</p>
+<p>
+	复利计算的特点是：把上期末的本利和作为下一期的本金，在计算时每一期本金的数额是不同的。复利的计算公式是：F=P（1+i）^n</p>
+<p>
+	复利计算有间断复利和连续复利之分。按期（如按年、半年、季、月或日等）计算复利的方法为间断复利；按瞬时计算复利的方法为连续复利。在实际应用中一般采用间断复利的计算方法。</p>
+<h3>
+	复利现值</h3>
+<p>
+	复利现值是指在计算复利的情况下，要达到未来某一特定的资金金额，必须投入的本金。所谓复利也称利上加利，是指一笔存款或者投资获得回报之后，再连本带利进行新一轮投资的方法。</p>
+<h3>
+	复利终值</h3>
+<p>
+	复利终值是指本金在约定的期限内获得利息后，将利息加入本金再计利息，逐期滚算到约定期末的本金之和。</p>
+<h3>
+	例题</h3>
+<p>
+	例如：本金为50000元，利率或者投资回报率为3%，投资年限为30年，那么，30年后所获得的利息收入，按复利计算公式来计算就是：50000&times;（1+3%）^30</p>
+<p>
+	由于，通胀率和利率密切关联，就像是一个硬币的正反两面，所以，复利终值的计算公式也可以用以计算某一特定资金在不同年份的实际价值。只需将公式中的利率换成通胀率即可。</p>
+<p>
+	例如：30年之后要筹措到300万元的养老金，假定平均的年回报率是3%，那么，必须投入的本金是3000000&times;1/（1+3%）^30</p>
+<p>
+每年都结算一次利息（以单利率方式结算），然后把本金和利息和起来作为下一年的本金。下一年结算利息时就用这个数字作为本金。复利率比单利率得到的利息要多。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="mw1024">
+<p>Copyright © 2004-01-11 <a href="http://jisuanqi.luhui.net/" title="计算器" target="_blank">鲁虺文化网</a> 版权所有<br /></p>
+<p>本站网页完美兼容PC、手机、平板等无障碍访问，网址均为：<a href="http://jisuanqi.luhui.net/" title="计算器"><font color="blue"><u>luhui.net</u></font></a></p>
+</div>
+<div style="display:none;"><script language="javascript" type="text/javascript" src="static/js/tj.js"></script></div>
+</footer>
+</body>
+</html>
