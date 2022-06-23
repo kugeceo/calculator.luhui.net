@@ -7,6 +7,8 @@ luhui React Calculator http://calculator.luhui.net Simple calculator built with 
 ## 鲁虺简单计算器展示
 ![luhuiWebPhotoshop绘制展示1](http://calculator.luhui.net/ahfarmercalculator用React构建的简单计算器截图_20220402032052.jpg)
 
+## 鲁虺简单计算器主站演示
+http://www.luhui.net/cn/js/
 
 自定义域名演示地址
 https://jisuanqi.luhui.net
