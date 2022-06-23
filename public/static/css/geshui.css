@@ -1,0 +1,234 @@
+/*计算器菜单 Start*/
+#taxMenus {
+    width: 650px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left
+}
+table, td, th{border: 1px #fff solid;}
+    #taxMenus ul li {
+        float: left;
+        text-align: center;
+        margin-right: 5px
+    }
+
+        #taxMenus ul li a {
+            display: block;
+            width: 80px;
+            height: 34px;
+            background: url(../images/002.png) no-repeat;
+            color: #000;
+            font-family: microsoft yahei,arial;
+            font-size: 14px;
+            text-decoration: none;
+            padding-top: 5px
+        }
+
+            #taxMenus ul li a:hover {
+                background: url(../images/001.png) no-repeat;
+                color: #fff !important
+            }
+
+            #taxMenus ul li a:focus {
+                outline: 0
+            }
+
+    #taxMenus .count_cur a {
+        background: url(../images/001.png) no-repeat !important;
+        color: #fff !important
+    }
+/*计算器菜单 End*/
+
+
+.personal-tax{padding:15px 15px 25px 15px;background-color:#fff;border:1px solid #edeef0;overflow:hidden;}
+.personal-tax-left{width: 50%;float:left;overflow:hidden;}
+.personal-tax-right{width: 50%;float:right;overflow:hidden;}
+
+@media only screen and (max-width:767px) {
+.personal-tax{
+width:100%;
+padding:15px 0 25px 0;
+background-color:#fff;
+border:1px solid #edeef0;
+overflow:hidden;
+}
+.personal-tax-left{
+width:100%;
+float:left;
+overflow:hidden;
+}
+.personal-tax-right{
+width:100%;
+float:right;
+overflow:hidden;
+margin-top:15px;
+}
+}
+
+/*计算 反算 按钮*/
+.buttonCalc {
+    float: left;
+    border: 0;
+    margin-bottom: -8.268px;
+    width: 75px;
+    height: 29px;
+    background: #01aaee;
+    font-family: microsoft yahei,arial;
+    font-size: 15px;
+    color: #fff !important
+}
+
+    .buttonCalc:hover {
+        background: #0099FF
+    }
+
+/*重置按钮*/
+.buttonReset {
+    float: left;
+    margin-left: 15px;
+    border: 0;
+    width: 75px;
+    height: 29px;
+    background: #ff8369;
+    font-family: microsoft yahei,arial;
+    font-size: 15px;
+    color: #fff !important
+}
+
+    .buttonReset:hover {
+        background: #ed6245
+    }
+
+
+
+#calc {
+    font-size: 14px;
+    color: black;
+}
+
+
+
+    /*单位 元 %*/
+    #calc .unit {
+        width: 30px;
+        text-align: center;
+        font-weight: 700
+    }
+
+    /*文本输入框*/
+    #calc .itxt {
+        font-size: 14px;
+        color: #000;
+        border: solid 2px #f39515;
+        height: 20px;
+        padding: 2px 10px;
+        width: 100px
+    }
+
+    /*下拉框*/
+    #calc .select {
+        font-size: 14px;
+        border: solid 2px #f39515;
+        padding: 2px 3px 3px 3px
+    }
+
+    #calc .column1 {
+        text-align: right;
+        width: 100px;
+        padding-right: 5px
+    }
+
+    #calc .column2 {
+        width: 155px
+    }
+
+    #calc .column3 {
+        width: 80px
+    }
+
+    #calc td {
+        padding: 5px 0px;
+    }
+
+    /*警告*/
+    #calc .warning {
+        color: red;
+        margin-left: 10px
+    }
+
+    #calc table {
+        margin: 0 auto
+    }
+
+
+#lblCourse {
+    text-decoration: none;
+    color: blue;
+    margin-left: 10px;
+}
+
+
+    #lblCourse:hover {
+        color: red;
+    }
+
+/*计算器标题*/
+#calcCaption {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/*计算结果文本框值 非个税*/
+#calc .rightblue {
+    text-align: right;
+    color: #00f
+}
+/*计算结果文本框值 个税*/
+#calc .rightRed {
+    text-align: right;
+    color: red
+}
+
+#linkDetail {
+    text-decoration: none;
+    color: blue;
+}
+
+    #linkDetail:hover {
+        color: red;
+    }
+
+#lblDetail {
+    color: gray;
+}
+
+#tabBox{
+    height: 24px;
+    width: 100%;
+    border-bottom: 1px solid #ECEFF7;
+    margin-top: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#tabBox .tab{
+    text-decoration: none;
+    display: block;
+    float: left;
+    background: #ECEFF7;
+    width: 140px;
+    height: 24px;
+    border-radius: 4px 4px 0px 0px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #000000;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+#tabBox .current,#tabBox .tab:hover{
+    background:#00B9F2;
+    color: #FFFFFF;
+}

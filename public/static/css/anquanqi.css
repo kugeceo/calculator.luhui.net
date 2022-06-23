@@ -1,0 +1,157 @@
+th,td,table{font-size: 18px;line-height: 30px;}@media screen and (max-width:800px){th,td,table{font-size: 10px;line-height: 14px;}}
+.example_info {
+    clear: both;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.example_info .ceil_example.green {
+    border-color: #009933;
+    background-color: #009933;
+}
+.example_info .ceil_example.red {
+    background-color: #FF3300;
+    border-color: #FF3300;
+}
+.example_info .ceil_example.yellow {
+    background-color: #FF9900;
+    border-color: #FF9900;
+}
+.example_info .ceil_example {
+    display: inline-block;
+    height: 12px;
+    width: 28px;
+    border: 1px solid;
+}.example_info span {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 18px;
+}
+#main #main_content p {
+	display:block;
+	clear:both;
+	font-size:14px;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+#main_link {
+	clear:both;
+	width:980px;
+	margin-top:8px;
+	margin-right:auto;
+	margin-left:auto;
+	display:block;
+	overflow:hidden
+}
+textarea {
+	font-family: initial;
+}
+.kuang {
+	padding:5px;
+	display:block;
+	overflow:hidden;
+	clear:both;
+	border:1px solid #addfff;
+	background-color:#FFF
+}
+a.daohang {
+	margin-bottom:5px;
+	text-decoration:none;
+	line-height: 30px;
+	height: 30px;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 0 solid #FFF;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #0ae;
+	margin-left: 10px;
+}
+table, td, th {
+	padding: 3px;
+	border: 1px #c0c0c0 solid;
+	border-collapse: collapse;
+	text-align: center;
+}
+select {
+	color: #3e4144;
+	font-size: 14px;
+	height: 28px;
+	vertical-align: middle;
+	border: 1px solid #d0ad9a;
+}
+.shurukuang {
+	color: #4b3d3d;
+	height: 30px;
+	padding-left: 4px;
+	border: 1px solid #a9a9a9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.anniu {
+	outline: none;
+	font-size: 15px;
+	color: #fff;
+	height: 32px;
+	line-height: 24px;
+	margin-top: 6px;
+	border: 1px solid #fda039;
+	border-radius: 3px;
+	background-position: 0 0;
+	background-color: #fda039;
+	cursor: pointer;
+}
+.juzhong {
+	text-align:center;
+}
+.biaodan {
+	padding: 10px;
+	line-height: 40px;
+	background: #fff5ec;
+	border: 1px solid #fcc;
+	font-size: 16px;
+	color: #706A6A;
+	text-align: center;
+	margin: 6px auto;
+	overflow: hidden;
+}
+.hanzi {
+	padding-left: 25px;
+	padding-right: 25px;
+	overflow: hidden;
+}
+.hanzi li {
+	list-style: none;
+	float: left;
+	margin: 5px;
+	font-size: 22px;
+	border: 1px solid #E0E0E0;
+	padding: 2px 8px;
+}
+#main_content ul li {
+	line-height:30px;
+	font-size: 14px;
+}
+#main_content .biaoti{
+    padding-top: 25px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#main_content .biaoti h1{
+    font-size: 24px;
+    color:#212121;
+}
+@media screen and (max-width:800px) {
+	body {
+	background-color:#e7e7e7;
+	background-position:0 10000px
+}

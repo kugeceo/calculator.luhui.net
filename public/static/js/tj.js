@@ -1,0 +1,10 @@
+document.writeln("<script charset=\'UTF-8\' id=\'LA_COLLECT\' src=\'//sdk.51.la/js-sdk-pro.min.js?id=JjEi6u9btiW2ECHy&ck=JjEi6u9btiW2ECHy\'></script>");
+document.writeln("<script>");
+document.writeln("var _hmt = _hmt || [];");
+document.writeln("(function() {");
+document.writeln("  var hm = document.createElement(\'script\');");
+document.writeln("  hm.src = \'http://www.luhui.net/js/tj.js?bf9e9c66c40abf8432da400d931c653a\';");
+document.writeln("  var s = document.getElementsByTagName(\'script\')[0]; ");
+document.writeln("  s.parentNode.insertBefore(hm, s);");
+document.writeln("})();");
+document.writeln("</script>");

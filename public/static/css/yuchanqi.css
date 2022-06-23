@@ -1,0 +1,168 @@
+.mod-panel {
+    width: 100%;
+    /* min-width: 580px; */
+}
+.mod-panel .hd{
+    padding-top: 25px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.mod-panel .hd h1{
+    font-size: 24px;
+    color:#212121;
+}
+.mod-panel .bd{
+    overflow: hidden;
+    margin: 0 auto;
+    border: solid 1px #b8dcf5;
+    background: #fcfeff;
+    padding-bottom: 40px;
+}
+.mod-panel .bd .panel{
+    padding: 30px 60px 0 60px;
+    border-bottom: solid 1px #b8dcf5;  
+}
+.mod-panel .bd .panel p.inpt{
+    width: 370px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.mod-panel .bd .panel p.submit{
+    padding-top: 10px;
+    _padding-top: 20px;
+    text-align: center;
+}
+.mod-panel .bd .panel select,
+.mod-panel .bd .panel input{
+    width: 60px;
+    padding: 5px 6px; 
+    border: solid 1px #ebebeb;
+    outline: none;
+    line-height: 16px;
+    color: #666;
+}
+.mod-panel .bd .panel input.inpt-year{
+    _position: relative;
+    _top: 5px;
+}
+.mod-panel .bd .panel input.btn{
+    width: 120px;
+    background: #4bae4f;
+    border: none;
+    line-height: 26px;
+    _line-height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.mod-panel .bd .description{
+    padding: 20px 0;
+    line-height: 24px;
+    text-align: justify;
+}
+.mod-panel .bd .result,
+.mod-panel .bd .overtime{
+    display: none;
+    width: 80%;
+    padding: 15px 15px;
+    margin: 0 auto;
+    background-color: #FFFBF7;
+    border: solid 1px #F3D9B5;
+    line-height: 32px;
+}
+.mod-panel .bd .result h3{
+    font-size: 16px;
+}
+.mod-panel .bd .result p{
+    text-indent: 30px;
+}
+.mod-panel .bd .result strong{
+    padding: 0 6px;
+    color: #ff8b00;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mod-panel .bd .overtime{
+    text-align: center;
+}
+.mod-panel .bd .info{
+    padding: 20px 60px;
+    line-height: 26px;
+}
+.mod-panel .bd .item{
+    padding-bottom: 20px;
+}
+.mod-panel .bd .info h2,
+.mod-panel .bd .info dt{
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0 0 8px 16px;
+    background: url("../images/icon.png") no-repeat 0 4px;
+    border-bottom: dashed 1px #b8dcf5;
+    color: #348bcf;
+    font-size: 16px;
+    font-weight: normal;
+}
+.mod-panel .bd .info p{
+    text-indent: 2em;
+    text-align: justify;
+}
+.mod-panel .bd .info span{
+    color: #ff8b00;
+}
+.mod-panel .bd .tip{
+    overflow: hidden;
+    margin-top: 15px;
+}
+.mod-panel .bd .tip dl{
+    overflow: hidden;
+    float: left;
+    *display: inline;
+    width: 47%;
+    border: solid 2px #a3cdfb;
+    border-radius: 8px;
+}
+.mod-panel .bd .tip dl.first-child{
+    overflow: hidden;
+    margin-right: 4%;
+    _margin-right: 2%;
+    line-height: 30px;
+}
+.mod-panel .bd .tip dt{
+    padding: 0;
+    padding-left: 25px;
+    margin-bottom: 0;
+    background-position: 10px 12px;
+    line-height: 40px;
+}
+.mod-panel .bd .tip dd{
+    padding: 10px 15px;
+    background-color: #f3faff;
+    text-align: justify;
+}
+.mod-panel .bd .hg1 dd{
+    min-height: 160px;
+    _height: 210px;
+}
+.mod-panel .bd .hg2 dd{
+    min-height: 130px;
+    _height: 156px;
+}
+.mod-panel .bd .hg3 dd{
+    min-height: 86px;
+    _height: 105px;
+}
+
+@media screen and (max-width: 1023px){
+.mod-panel .bd .tip dl{width: 96%; margin-bottom:5px;}
+
+.mod-panel .bd .panel{
+    padding: 10px 20px 0 20px;
+    border-bottom: solid 1px #b8dcf5;  
+}
+.mod-panel .bd .info{
+    padding: 10px 20px;
+}
+}

@@ -1,0 +1,28 @@
+/***网站背景颜色**/
+header {background:#fcfcfc;}.spm , .search input{background: #fdfcfc;}body , footer{background: #fdfdfc;max-width: 1024px;margin: 0 auto;}
+/***网站字体颜色**/
+body{color:#333333;background: #ededed;}.content p , .content div , .callkf h3 , .logo .sitename , .appraisal .comments_info h4{color:#555555;}a,ins{color:#363636}a:hover , .post li i{color:#d12005;} footer p , footer  a{color:#343232}
+/***导航栏和按钮颜色**/
+.search button:hover , #navul li a:hover , .compost .com_info button:hover {background:#2B7FBD;}
+.navbg , #navul , .search button , .pagebar .page:hover , .pagebar .now-page , .compost .com_info button , .callkf a , .silder-ctrl-con.active>span{background:#2B7FBD;}
+.content table tr:first-child{background:#2B7FBD!important;}
+/**边框颜色**/
+.spm h3 , .breadcrumb ,  .appraisal li{border-bottom:1px solid #e6e6e6;}
+.comlist ul{border-top:1px solid #e6e6e6}
+.content table td , .content table td a , .compost .com_info li input , .compost .com_box textarea , .lower li a , .photo li , .content .post-nav{border:1px solid #e6e6e6;}
+.photo li:hover {border:1px solid #2B7FBD;}
+.search input{border:1px solid #e6e6e6;color:#888888;}
+.spm h3 span a , .spm .info , .post-nav , .post li span , .post li span i ,  .pagebar .page , .focus p , .clbody em , .appraisal .comments_info time , .callkf p , .logo p , .content .post-nav p{color:#888888}
+.tags a{color:#fff;background:#a4bada;}
+.tags a:hover{background:#92acd3;}
+.callkf i{color:#2B7FBD}
+.abstract{background: #e6e6e6;color: #555555;}
+@media screen and (max-width:720px){
+#mnav i,#msearch i , #mcall i{color:#2B7FBD}
+#navul li{border-top:1px #2B7FBD solid;background:#2B7FBD;}
+.search , .callkf{background: #fdfcfc; }
+}
+.read_btn{color: #2B7FBD;border: 1px solid #2B7FBD;}
+.read_btn:hover{background:#2B7FBD;}
+.content h2 , .content h3 , .content h4 , .content h5 {border-left:2px #c61f05 solid;background: #e6e6e6;}
+.lower li a:hover , .lower li a.cur{color:#2B7FBD;border:1px solid #2B7FBD}
